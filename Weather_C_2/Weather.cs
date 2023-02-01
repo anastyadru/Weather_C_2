@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Net;
+using System.Linq;
 
 namespace Weather_C_2
 {
