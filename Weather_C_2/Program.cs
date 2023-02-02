@@ -17,9 +17,11 @@ namespace Weather_C_2
 
             HttpWebResponse httpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse(); // создала объект Response, чтобы считать данные с Request (get - возвращает)
 
-            using (StreamReader streamReader = new )
+            string response;
+            
+            using (StreamReader streamReader = new StreamReader(HttpWebResponse.GetResponseStream)) // считала все данные с httpWebResponse
             {
-                
+                response =
             }
         }
     }
