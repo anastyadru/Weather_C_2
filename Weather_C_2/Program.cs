@@ -26,3 +26,5 @@ namespace Weather_C_2
         }
     }
 }
+
+// units=metric - температура в Цельсиях
