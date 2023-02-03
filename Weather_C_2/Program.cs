@@ -23,6 +23,8 @@ namespace Weather_C_2
             {
                 response = streamReader.ReadToEnd();
             }
+            
+            WeatherResponse weatherResponse = 
         }
     }
 }
