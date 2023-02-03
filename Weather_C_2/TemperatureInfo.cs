@@ -7,6 +7,6 @@ namespace Weather_C_2
 {
     public class TemperatureInfo
     {
-        
+        public float Temp { get; set; }
     }
 }
