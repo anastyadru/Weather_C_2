@@ -23,8 +23,8 @@ namespace Weather_C_2
             {
                 response = streamReader.ReadToEnd();
             }
-            
-            WeatherResponse weatherResponse = 
+
+            WeatherResponse weatherResponse = JsonConvert.DeserializeObject<>;
         }
     }
 }
