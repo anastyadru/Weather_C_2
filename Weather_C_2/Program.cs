@@ -28,6 +28,8 @@ namespace Weather_C_2
             WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
             
             Console.WriteLine("");
+
+            Console.ReadLine();
         }
     }
 }
