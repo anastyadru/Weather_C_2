@@ -27,7 +27,7 @@ namespace Weather_C_2
 
             WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
             
-            Console.WriteLine("");
+            Console.WriteLine("Temperature in {0}: {1} °C, weatherResponse.Name, weatherResponse.Main.Temp");
 
             Console.ReadLine();
         }
