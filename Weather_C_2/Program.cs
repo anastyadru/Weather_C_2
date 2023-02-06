@@ -35,3 +35,12 @@ namespace Weather_C_2
 }
 
 // units=metric - температура в Цельсиях
+
+// enum Cities
+// {
+    // Minsk,
+    // Vitebsk,
+    // Novopolotsk,    
+    // Brest,
+    // Grodno
+// }
