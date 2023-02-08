@@ -17,6 +17,11 @@ namespace Weather_C_2
             
             string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&appid=d6bfd60ae10dc578300a860f105ed749"; // d6bfd60ae10dc578300a860f105ed749 - API-ключ
 
+            // string url = "https://api.openweathermap.org/data/2.5/weather?q=Vitebsk&units=metric&appid=";
+            // string url = "https://api.openweathermap.org/data/2.5/weather?q=Novopolotsk&units=metric&appid=";
+            // string url = "https://api.openweathermap.org/data/2.5/weather?q=Brestk&units=metric&appid=";
+            // string url = "https://api.openweathermap.org/data/2.5/weather?q=Grodnok&units=metric&appid=";
+            
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url); // создала объект Request, чтобы сделать запрос
 
             HttpWebResponse httpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse(); // создала объект Response, чтобы считать данные с Request (get - возвращает)
