@@ -29,7 +29,7 @@ namespace Weather_C_2
                 {
                     using (StreamReader reader = new StreamReader(s))
                     {
-                        
+                        answer = await reader.ReadToEndAsync();
                     }
                 }
             }
