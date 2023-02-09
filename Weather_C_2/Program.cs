@@ -27,7 +27,10 @@ namespace Weather_C_2
 
                 using (Stream s = response.GetResponseStream())
                 {
-                    
+                    using (StreamReader reader = new StreamReader(s))
+                    {
+                        
+                    }
                 }
             }
             
@@ -42,9 +45,9 @@ namespace Weather_C_2
             // HttpWebResponse httpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse(); // создала объект Response, чтобы считать данные с Request (get - возвращает)
             // string response;
             // using (StreamReader streamReader = new StreamReader(HttpWebResponse.GetResponseStream)) // считала все данные с httpWebResponse
-            {
-                response = streamReader.ReadToEnd();
-            }
+            // {
+                // response = streamReader.ReadToEnd();
+            // }
 
             WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
             
