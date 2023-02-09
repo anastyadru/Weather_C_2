@@ -23,7 +23,12 @@ namespace Weather_C_2
                 
                 WebResponse response = await request.GetResponseAsync();
                 
-                
+                string answer = String.Empty;
+
+                using (Stream s = response.GetResponseStream())
+                {
+                    
+                }
             }
             
             // string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&appid=d6bfd60ae10dc578300a860f105ed749"; // d6bfd60ae10dc578300a860f105ed749 - API-ключ
@@ -35,10 +40,8 @@ namespace Weather_C_2
             
             // HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url); // создала объект Request, чтобы сделать запрос
             // HttpWebResponse httpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse(); // создала объект Response, чтобы считать данные с Request (get - возвращает)
-
-            string response;
-            
-            using (StreamReader streamReader = new StreamReader(HttpWebResponse.GetResponseStream)) // считала все данные с httpWebResponse
+            // string response;
+            // using (StreamReader streamReader = new StreamReader(HttpWebResponse.GetResponseStream)) // считала все данные с httpWebResponse
             {
                 response = streamReader.ReadToEnd();
             }
