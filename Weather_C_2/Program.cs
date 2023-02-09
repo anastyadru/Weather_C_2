@@ -17,7 +17,13 @@ namespace Weather_C_2
             {
                 WebRequest request = WebRequest.Create("https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&appid=d6bfd60ae10dc578300a860f105ed749");
 
+                request.Method = "POST";
+
+                request.ContentType = " ";
+                
                 WebResponse response = await request.GetResponseAsync();
+                
+                
             }
             
             // string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&appid=d6bfd60ae10dc578300a860f105ed749"; // d6bfd60ae10dc578300a860f105ed749 - API-ключ
