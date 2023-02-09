@@ -32,6 +32,8 @@ namespace Weather_C_2
                         answer = await reader.ReadToEndAsync();
                     }
                 }
+                
+                response.Close();
             }
             
             // string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&appid=d6bfd60ae10dc578300a860f105ed749"; // d6bfd60ae10dc578300a860f105ed749 - API-ключ
