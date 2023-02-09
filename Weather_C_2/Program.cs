@@ -16,6 +16,8 @@ namespace Weather_C_2
 
             {
                 WebRequest request = WebRequest.Create("https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&appid=d6bfd60ae10dc578300a860f105ed749");
+
+                WebResponse response = await request.GetResponseAsync();
             }
             
             // string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&appid=d6bfd60ae10dc578300a860f105ed749"; // d6bfd60ae10dc578300a860f105ed749 - API-ключ
@@ -26,8 +28,7 @@ namespace Weather_C_2
             // string url = "https://api.openweathermap.org/data/2.5/weather?q=Grodnok&units=metric&appid=a7eaf17a7cf263d162e40c802f229cd7";
             
             // HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url); // создала объект Request, чтобы сделать запрос
-
-            HttpWebResponse httpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse(); // создала объект Response, чтобы считать данные с Request (get - возвращает)
+            // HttpWebResponse httpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse(); // создала объект Response, чтобы считать данные с Request (get - возвращает)
 
             string response;
             
