@@ -9,11 +9,13 @@ using System.Windows.Forms;
 
 namespace Weather_C_2
 {
-    public class Form1
+    public partial class Form1
     {
-
-
-
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        
         private async void Form1_Load(object sender, EventArgs e)
         {
             WebRequest request = WebRequest.Create("https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&appid=d6bfd60ae10dc578300a860f105ed749");
