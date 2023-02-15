@@ -33,11 +33,11 @@ namespace Weather_C_2
                 // response = streamReader.ReadToEnd();
             // }
 
-            WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
+            // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
             
-            Console.WriteLine("Temperature in {0}: {1} °C, weatherResponse.Name, weatherResponse.Main.Temp");
+            // Console.WriteLine("Temperature in {0}: {1} °C, weatherResponse.Name, weatherResponse.Main.Temp");
 
-            Console.ReadLine();
+            // Console.ReadLine();
         }
     }
 }
