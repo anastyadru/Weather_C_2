@@ -13,6 +13,8 @@ namespace Weather_C_2
         public static void Main(string[] args)
         {
             Console.WriteLine("Введите название города: ");
+            
+            string city = Console.ReadLine();
 
             {
                 
