@@ -22,6 +22,11 @@ namespace Weather_C_2
             WebRequest request = WebRequest.Create(url);
             WebResponse response = request.GetResponse();
             
+            // Чтение данных из ответа
+            Stream dataStream = response.GetResponseStream();
+            StreamReader reader = new StreamReader(dataStream);
+            string responseFromServer = reader.ReadToEnd();
+            
             {
                 
             }
