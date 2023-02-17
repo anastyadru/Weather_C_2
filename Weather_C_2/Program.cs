@@ -18,6 +18,10 @@ namespace Weather_C_2
             
             string url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=3a3f97a4b8d17ec7a4d9c4e9b9f8e4a1";
 
+            // Отправка запроса и получение ответа
+            WebRequest request = WebRequest.Create(url);
+            WebResponse response = request.GetResponse();
+            
             {
                 
             }
