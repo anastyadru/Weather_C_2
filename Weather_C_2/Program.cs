@@ -22,11 +22,10 @@ namespace Weather_C_2
             StreamReader reader = new StreamReader(dataStream);
             string responseFromServer = reader.ReadToEnd();
 
-            // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
             
-            // Console.WriteLine("Temperature in {0}: {1} °C, weatherResponse.Name, weatherResponse.Main.Temp");
-
-            // Console.ReadLine();
+            
+            
+            // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
         }
     }
 }
@@ -36,5 +35,5 @@ namespace Weather_C_2
 // string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&appid=d6bfd60ae10dc578300a860f105ed749";
 // string url = "https://api.openweathermap.org/data/2.5/weather?q=Vitebsk&units=metric&appid=f1451f839fdb9f6c9c04a07f128795ec";
 // string url = "https://api.openweathermap.org/data/2.5/weather?q=Novopolotsk&units=metric&appid=8eedcba634b7c5a1f7fa0261db5cf635";
-// string url = "https://api.openweathermap.org/data/2.5/weather?q=Brestk&units=metric&appid=55dca5e21670cdbf9b77d287b4965ab6";
-// string url = "https://api.openweathermap.org/data/2.5/weather?q=Grodnok&units=metric&appid=a7eaf17a7cf263d162e40c802f229cd7";
+// string url = "https://api.openweathermap.org/data/2.5/weather?q=Brest&units=metric&appid=55dca5e21670cdbf9b77d287b4965ab6";
+// string url = "https://api.openweathermap.org/data/2.5/weather?q=Grodno&units=metric&appid=a7eaf17a7cf263d162e40c802f229cd7";
