@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Net;
 using System.Linq;
 using Newtonsoft.Json;
 
 namespace Weather_C_2
 {
-    internal class Program
+    class Program
     {
         public static void Main(string[] args)
         {
             Console.WriteLine("Введите название города: ");
-            
             string city = Console.ReadLine();
             
-            string url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=3a3f97a4b8d17ec7a4d9c4e9b9f8e4a1";
+            string url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=1a5442d5206cd9ef2bfc21e5ca523b75";
 
             // Отправка запроса и получение ответа
             WebRequest request = WebRequest.Create(url);
