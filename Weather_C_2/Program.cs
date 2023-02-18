@@ -30,13 +30,13 @@ namespace Weather_C_2
             //  {
                 // try
                 // {
-                    // GetForecastAsync(Cities.Moscow).Wait();
-                    // Console.WriteLine("Погода в городе Москва:");
-                    // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Moscow).Result.Main.Temp}");
-                    // Console.WriteLine($"Давление: {GetForecastAsync(Cities.Moscow).Result.Main.Pressure}");
-                    // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Moscow).Result.Main.Humidity}");
-                    // Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Moscow).Result.Main.TempMin}");
-                    // Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Moscow).Result.Main.TempMax}");
+                    // GetForecastAsync(Cities.Minsk).Wait();
+                    // Console.WriteLine("Погода в городе Минск:");
+                    // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Minsk).Result.Main.Temp}");
+                    // Console.WriteLine($"Давление: {GetForecastAsync(Cities.Minsk).Result.Main.Pressure}");
+                    // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Minsk).Result.Main.Humidity}");
+                    // Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Minsk).Result.Main.TempMin}");
+                    // Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Minsk).Result.Main.TempMax}");
                 // }
 
                 // catch (Exception ex)
