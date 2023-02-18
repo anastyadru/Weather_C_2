@@ -26,6 +26,26 @@ namespace Weather_C_2
             
             
             // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
+            
+            //  {
+                // try
+                // {
+                    // GetForecastAsync(Cities.Moscow).Wait();
+                    // Console.WriteLine("Погода в городе Москва:");
+                    // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Moscow).Result.Main.Temp}");
+                    // Console.WriteLine($"Давление: {GetForecastAsync(Cities.Moscow).Result.Main.Pressure}");
+                    // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Moscow).Result.Main.Humidity}");
+                    // Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Moscow).Result.Main.TempMin}");
+                    // Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Moscow).Result.Main.TempMax}");
+                // }
+
+                // catch (Exception ex)
+                // {
+                    // Console.WriteLine(ex.Message);
+                // }
+                    // Console.ReadKey();
+            //}
+
         }
     }
 }
