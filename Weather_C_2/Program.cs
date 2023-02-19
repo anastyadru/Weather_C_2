@@ -57,3 +57,20 @@ namespace Weather_C_2
 // string url = "https://api.openweathermap.org/data/2.5/weather?q=Novopolotsk&units=metric&appid=8eedcba634b7c5a1f7fa0261db5cf635";
 // string url = "https://api.openweathermap.org/data/2.5/weather?q=Brest&units=metric&appid=55dca5e21670cdbf9b77d287b4965ab6";
 // string url = "https://api.openweathermap.org/data/2.5/weather?q=Grodno&units=metric&appid=a7eaf17a7cf263d162e40c802f229cd7";
+
+// GetForecastAsync(Cities.Vitebsk).Wait();
+// Console.WriteLine("Погода в городе Витебск:");
+// Console.WriteLine($"Температура: {GetForecastAsync(Cities.Vitebsk).Result.Main.Temp}");
+// Console.WriteLine($"Давление: {GetForecastAsync(Cities.Vitebsk).Result.Main.Pressure}");
+// Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Vitebsk).Result.Main.Humidity}");
+// Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Vitebsk).Result.Main.TempMin}");
+// Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Vitebsk).Result.Main.TempMax}");
+
+// GetForecastAsync(Cities.Novopolotsk).Wait();
+// Console.WriteLine("Погода в городе Новополоцк:");
+// Console.WriteLine($"Температура: {GetForecastAsync(Cities.Novopolotsk).Result.Main.Temp}");
+// Console.WriteLine($"Давление: {GetForecastAsync(Cities.Novopolotsk).Result.Main.Pressure}");
+// Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Novopolotsk).Result.Main.Humidity}");
+// Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Novopolotsk).Result.Main.TempMin}");
+// Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Novopolotsk).Result.Main.TempMax}");
+
