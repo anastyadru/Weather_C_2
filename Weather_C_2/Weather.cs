@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Net;
-using System.Linq;
 
 namespace Weather_C_2
 {
@@ -11,12 +7,3 @@ namespace Weather_C_2
         
     }
 }
-
-// enum Cities
-// {
-    // Minsk,
-    // Vitebsk,
-    // Novopolotsk,
-    // Brest,
-    // Grodno
-// }
