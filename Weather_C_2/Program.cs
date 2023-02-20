@@ -3,12 +3,14 @@ using System.IO;
 using System.Net;
 using System.Linq;
 using Newtonsoft.Json;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Weather_C_2
 {
     class Program
     {
-        async static Task Main(string[] args)
+        static async Task Main(string[] args)
         {
             do
             {
@@ -16,13 +18,15 @@ namespace Weather_C_2
                 var i = int.Parse(Console.ReadLine());
                 
                 string city = Console.ReadLine();
+                
+                var httpClient = new HttpClient(); // создала экземпляра HTTP-клиента
             
                 string url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=1a5442d5206cd9ef2bfc21e5ca523b75";
-            
-                WebRequest request = WebRequest.Create(url); // Отправила запрос и получила ответ
+
+                WebRequest request = WebRequest.Create(url); // отправила запрос и получила ответ
                 WebResponse response = request.GetResponse();
             
-                Stream dataStream = response.GetResponseStream(); // Считала данные из ответа
+                Stream dataStream = response.GetResponseStream(); // считала данные из ответа
                 StreamReader reader = new StreamReader(dataStream);
                 string responseFromServer = reader.ReadToEnd();
 
