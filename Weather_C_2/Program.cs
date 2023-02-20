@@ -36,8 +36,8 @@ namespace Weather_C_2
                 // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
             
                 // {
-                // try
-                // {
+                    try
+                    {
                 // GetForecastAsync(Cities.Minsk).Wait();
                 // Console.WriteLine("Погода в городе Минск:");
                 // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Minsk).Result.Main.Temp}");
@@ -45,15 +45,13 @@ namespace Weather_C_2
                 // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Minsk).Result.Main.Humidity}");
                 // Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Minsk).Result.Main.TempMin}");
                 // Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Minsk).Result.Main.TempMax}");
-                // }
-
-                // catch (Exception ex)
-                // {
-                // Console.WriteLine(ex.Message);
-                // }
-                // Console.ReadKey();
-                //}
-
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message); 
+                    }
+                
+                    Console.ReadKey();
             } 
             while (true);
         }
