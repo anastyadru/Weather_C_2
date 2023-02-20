@@ -8,7 +8,7 @@ namespace Weather_C_2
 {
     class Program
     {
-        public static void Main(string[] args)
+        async static Task Main(string[] args)
         {
             do
             {
@@ -31,7 +31,7 @@ namespace Weather_C_2
             
                 // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
             
-                //  {
+                // {
                 // try
                 // {
                 // GetForecastAsync(Cities.Minsk).Wait();
