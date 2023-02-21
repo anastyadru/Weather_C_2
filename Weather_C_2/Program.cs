@@ -17,11 +17,12 @@ namespace Weather_C_2
                 Console.WriteLine("Введите название города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
                 var i = int.Parse(Console.ReadLine());
                 
-                string city = Console.ReadLine();
-                
-                var httpClient = new HttpClient(); // создала экземпляра HTTP-клиента
-            
-                string url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75";
+                string cityName = Console.ReadLine();
+
+                using (HttpClient client = new HttpClient()) // создала экземпляра HTTP-клиента
+                {
+                    string url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75";
+                }
 
                 WebRequest request = WebRequest.Create(url); // отправила запрос и получила ответ
                 WebResponse response = request.GetResponse();
