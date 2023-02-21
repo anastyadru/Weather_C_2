@@ -51,8 +51,6 @@ namespace Weather_C_2
 // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Minsk).Result.Main.Temp}");
 // Console.WriteLine($"Давление: {GetForecastAsync(Cities.Minsk).Result.Main.Pressure}");
 // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Minsk).Result.Main.Humidity}");
-// Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Minsk).Result.Main.TempMin}");
-// Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Minsk).Result.Main.TempMax}");
 
 // units=metric - температура в Цельсиях
 
@@ -67,29 +65,21 @@ namespace Weather_C_2
 // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Vitebsk).Result.Main.Temp}");
 // Console.WriteLine($"Давление: {GetForecastAsync(Cities.Vitebsk).Result.Main.Pressure}");
 // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Vitebsk).Result.Main.Humidity}");
-// Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Vitebsk).Result.Main.TempMin}");
-// Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Vitebsk).Result.Main.TempMax}");
 
 // GetForecastAsync(Cities.Novopolotsk).Wait();
 // Console.WriteLine("Погода в городе Новополоцк:");
 // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Novopolotsk).Result.Main.Temp}");
 // Console.WriteLine($"Давление: {GetForecastAsync(Cities.Novopolotsk).Result.Main.Pressure}");
 // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Novopolotsk).Result.Main.Humidity}");
-// Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Novopolotsk).Result.Main.TempMin}");
-// Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Novopolotsk).Result.Main.TempMax}");
 
 // GetForecastAsync(Cities.Brest).Wait();
 // Console.WriteLine("Погода в городе Брест:");
 // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Brest).Result.Main.Temp}");
 // Console.WriteLine($"Давление: {GetForecastAsync(Cities.Brest).Result.Main.Pressure}");
 // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Brest).Result.Main.Humidity}");
-// Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Brest).Result.Main.TempMin}");
-// Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Brest).Result.Main.TempMax}");
 
 // GetForecastAsync(Cities.Grodno).Wait();
 // Console.WriteLine("Погода в городе Гродно:");
 // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Grodno).Result.Main.Temp}");
 // Console.WriteLine($"Давление: {GetForecastAsync(Cities.Grodno).Result.Main.Pressure}");
 // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Grodno).Result.Main.Humidity}");
-// Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Grodno).Result.Main.TempMin}");
-// Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Grodno).Result.Main.TempMax}");
