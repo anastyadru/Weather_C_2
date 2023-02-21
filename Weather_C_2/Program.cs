@@ -12,10 +12,10 @@ namespace Weather_C_2
     {
         static async Task Main(string[] args)
         {
-            do
+            try
             {
                 Console.WriteLine("Введите название города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
-                var i = int.Parse(Console.ReadLine());
+                // var i = int.Parse(Console.ReadLine());
                 
                 string cityName = Console.ReadLine();
 
@@ -30,34 +30,29 @@ namespace Weather_C_2
                 Stream dataStream = response.GetResponseStream(); // считала данные из ответа
                 StreamReader reader = new StreamReader(dataStream);
                 string responseFromServer = reader.ReadToEnd();
-
+            }
             
-            
-            
-                // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
-            
-                // {
-                    try
-                    {
-                // GetForecastAsync(Cities.Minsk).Wait();
-                // Console.WriteLine("Погода в городе Минск:");
-                // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Minsk).Result.Main.Temp}");
-                // Console.WriteLine($"Давление: {GetForecastAsync(Cities.Minsk).Result.Main.Pressure}");
-                // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Minsk).Result.Main.Humidity}");
-                // Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Minsk).Result.Main.TempMin}");
-                // Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Minsk).Result.Main.TempMax}");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message); 
-                    }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message); 
+            }
                 
-                    Console.ReadKey();
-            } 
-            while (true);
+            Console.ReadKey();
+
+                // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
         }
     }
 }
+
+
+
+// GetForecastAsync(Cities.Minsk).Wait();
+// Console.WriteLine("Погода в городе Минск:");
+// Console.WriteLine($"Температура: {GetForecastAsync(Cities.Minsk).Result.Main.Temp}");
+// Console.WriteLine($"Давление: {GetForecastAsync(Cities.Minsk).Result.Main.Pressure}");
+// Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Minsk).Result.Main.Humidity}");
+// Console.WriteLine($"Минимальная температура: {GetForecastAsync(Cities.Minsk).Result.Main.TempMin}");
+// Console.WriteLine($"Максимальная температура: {GetForecastAsync(Cities.Minsk).Result.Main.TempMax}");
 
 // units=metric - температура в Цельсиях
 
