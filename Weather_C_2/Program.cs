@@ -34,17 +34,15 @@ namespace Weather_C_2
             
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message); 
+                Console.WriteLine("Error:"+ex.Message); 
             }
-                
-            Console.ReadKey();
 
-                // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
+            Console.ReadKey();
         }
     }
 }
 
-
+// WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
 
 // GetForecastAsync(Cities.Minsk).Wait();
 // Console.WriteLine("Погода в городе Минск:");
