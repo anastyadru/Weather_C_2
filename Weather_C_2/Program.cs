@@ -15,9 +15,32 @@ namespace Weather_C_2
             try
             {
                 Console.WriteLine("Введите название города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
-                // var i = int.Parse(Console.ReadLine());
+                int cityNumber = int.Parse(Console.ReadLine());
                 
                 string cityName = Console.ReadLine();
+                
+                switch (cityNumber)
+                {
+                    case 1: 
+                        cityName = "Minsk"; 
+                        break;
+                    
+                    case 2: 
+                        cityName = "Vitebsk"; 
+                        break;
+                    
+                    case 3: 
+                        cityName = "Novopolotsk"; 
+                        break;
+                    
+                    case 4: 
+                        cityName = "Brest"; 
+                        break;
+                    
+                    case 5: 
+                        cityName = "Grodno"; 
+                        break;
+                }
 
                 using (var client = new HttpClient()) // создала экземпляра HTTP-клиента
                 {
