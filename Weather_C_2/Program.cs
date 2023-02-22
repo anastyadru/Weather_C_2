@@ -19,17 +19,17 @@ namespace Weather_C_2
                 
                 string cityName = Console.ReadLine();
 
-                using (HttpClient client = new HttpClient()) // создала экземпляра HTTP-клиента
+                using (var client = new HttpClient()) // создала экземпляра HTTP-клиента
                 {
-                    string url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75";
+                    var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75");
                 }
 
-                WebRequest request = WebRequest.Create(url); // отправила запрос и получила ответ
-                WebResponse response = request.GetResponse();
+                // WebRequest request = WebRequest.Create(url); // отправила запрос и получила ответ
+                // WebResponse response = request.GetResponse();
             
-                Stream dataStream = response.GetResponseStream(); // считала данные из ответа
-                StreamReader reader = new StreamReader(dataStream);
-                string responseFromServer = reader.ReadToEnd();
+                // Stream dataStream = response.GetResponseStream(); // считала данные из ответа
+                // StreamReader reader = new StreamReader(dataStream);
+                // string responseFromServer = reader.ReadToEnd();
             }
             
             catch (Exception ex)
