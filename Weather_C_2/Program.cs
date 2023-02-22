@@ -22,7 +22,8 @@ namespace Weather_C_2
                 switch (cityNumber)
                 {
                     case 1: 
-                        cityName = "Minsk"; 
+                        cityName = "Minsk";
+                        // string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&lang=ru&appid=d6bfd60ae10dc578300a860f105ed749";
                         // GetForecastAsync(Cities.Minsk).Wait();
                         // Console.WriteLine("Погода в городе Минск:");
                         // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Minsk).Result.Main.Temp}");
@@ -31,7 +32,8 @@ namespace Weather_C_2
                         break;
                     
                     case 2: 
-                        cityName = "Vitebsk"; 
+                        cityName = "Vitebsk";
+                        // string url = "https://api.openweathermap.org/data/2.5/weather?q=Vitebsk&units=metric&lang=ru&appid=f1451f839fdb9f6c9c04a07f128795ec";
                         // GetForecastAsync(Cities.Vitebsk).Wait();
                         // Console.WriteLine("Погода в городе Витебск:");
                         // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Vitebsk).Result.Main.Temp}");
@@ -40,7 +42,8 @@ namespace Weather_C_2
                         break;
                     
                     case 3: 
-                        cityName = "Novopolotsk"; 
+                        cityName = "Novopolotsk";
+                        // string url = "https://api.openweathermap.org/data/2.5/weather?q=Novopolotsk&units=metric&lang=ru&appid=8eedcba634b7c5a1f7fa0261db5cf635";
                         // GetForecastAsync(Cities.Novopolotsk).Wait();
                         // Console.WriteLine("Погода в городе Новополоцк:");
                         // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Novopolotsk).Result.Main.Temp}");
@@ -49,7 +52,8 @@ namespace Weather_C_2
                         break;
                     
                     case 4: 
-                        cityName = "Brest"; 
+                        cityName = "Brest";
+                        // string url = "https://api.openweathermap.org/data/2.5/weather?q=Brest&units=metric&lang=ru&appid=55dca5e21670cdbf9b77d287b4965ab6";
                         // GetForecastAsync(Cities.Brest).Wait();
                         // Console.WriteLine("Погода в городе Брест:");
                         // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Brest).Result.Main.Temp}");
@@ -57,8 +61,9 @@ namespace Weather_C_2
                         // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Brest).Result.Main.Humidity}");
                         break;
                     
-                    case 5: 
+                    case 5:
                         cityName = "Grodno";
+                        // string url = "https://api.openweathermap.org/data/2.5/weather?q=Grodno&units=metric&lang=ru&appid=a7eaf17a7cf263d162e40c802f229cd7";
                         // GetForecastAsync(Cities.Grodno).Wait();
                         // Console.WriteLine("Погода в городе Гродно:");
                         // Console.WriteLine($"Температура: {GetForecastAsync(Cities.Grodno).Result.Main.Temp}");
@@ -93,9 +98,3 @@ namespace Weather_C_2
 // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
 
 // units=metric - температура в Цельсиях
-
-// string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&lang=ru&appid=d6bfd60ae10dc578300a860f105ed749";
-// string url = "https://api.openweathermap.org/data/2.5/weather?q=Vitebsk&units=metric&lang=ru&appid=f1451f839fdb9f6c9c04a07f128795ec";
-// string url = "https://api.openweathermap.org/data/2.5/weather?q=Novopolotsk&units=metric&lang=ru&appid=8eedcba634b7c5a1f7fa0261db5cf635";
-// string url = "https://api.openweathermap.org/data/2.5/weather?q=Brest&units=metric&lang=ru&appid=55dca5e21670cdbf9b77d287b4965ab6";
-// string url = "https://api.openweathermap.org/data/2.5/weather?q=Grodno&units=metric&lang=ru&appid=a7eaf17a7cf263d162e40c802f229cd7";
