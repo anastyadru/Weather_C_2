@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Weather_C_2
 {
-    public class Weather
+    public class Wind
     {
-        public int Id { get; set; }
-        public string Main { get; set; }
-        public string Description { get; set; }
+        public double Speed { get; set; }
+        public double Deg { get; set; }
+        public double Gust { get; set; }
     }
 }
