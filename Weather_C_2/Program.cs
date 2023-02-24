@@ -40,13 +40,13 @@ namespace Weather_C_2
 
         static void Main(string[] args)
         {
-            // try
-            // {
-                // Console.WriteLine("Введите название города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
-                // var cityNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите название города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
+            var cityNumber = int.Parse(Console.ReadLine());
                 
-                // var cityName = Console.ReadLine();
-                
+            var cityName = Console.ReadLine();
+
+            try
+            {
                 // switch (cityNumber)
                 // {
                     // case 1: 
@@ -99,13 +99,13 @@ namespace Weather_C_2
                         // Console.WriteLine($"Влажность: {GetForecastAsync(Cities.Grodno).Result.Main.Humidity}");
                         // break;
                 // }
-            
-            // catch (Exception ex)
-            // {
-                // Console.WriteLine("Error:"+ex.Message); 
-            // }
-
-            // Console.ReadKey();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error:"+ex.Message);
+                throw;
+            }
+            Console.ReadKey();
         }
     }
 }
