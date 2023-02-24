@@ -102,8 +102,8 @@ namespace Weather_C_2
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error:"+ex.Message);
-                throw;
+                Console.WriteLine(ex);
+                Console.Write("Город не найден или что-то пошло не так");
             }
             Console.ReadKey();
         }
