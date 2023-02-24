@@ -26,5 +26,4 @@ namespace Weather_C_2
         // {
         // Console.WriteLine("Температура: {0}\nДавление: {1}\nВлажность: {2}%");
         // }
-    }
 }
