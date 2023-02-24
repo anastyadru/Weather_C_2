@@ -12,9 +12,18 @@ namespace Weather_C_2
     {
         public static async Task ConnectAsync()
         {
-            WebRequest request = WebRequest.Create(url);
-            string url = "https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75";
+            WebRequest request = WebRequest.Create("https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75");
+            request.Method = "POST";
             WebResponse response = await request.GetResponseAsync();
+            string answer = string.Empty;
+            using (Stream s = response.GetResponseStream())
+            {
+                using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                {
+                    answer = await reader.ReadToEndAsync();
+                }
+            }
+            response.Close();
             
             // using (var client = new HttpClient()) // создала экземпляра HTTP-клиента
             // {
@@ -27,9 +36,10 @@ namespace Weather_C_2
             // Stream dataStream = response.GetResponseStream(); // считала данные из ответа
             // StreamReader reader = new StreamReader(dataStream);
             // string responseFromServer = reader.ReadToEnd();
-            
         }
-        // {
+
+        static void Main(string[] args)
+        {
             // try
             // {
                 // Console.WriteLine("Введите название города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
@@ -96,10 +106,8 @@ namespace Weather_C_2
             // }
 
             // Console.ReadKey();
-        // }
+        }
     }
 }
 
 // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
-
-// units=metric - температура в Цельсиях
