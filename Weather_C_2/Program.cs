@@ -25,7 +25,8 @@ namespace Weather_C_2
             }
             response.Close();
             
-            WeatherResponse response_global = JsonConvert.DeserializeObject<WeatherResponse>(answer);
+            WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(answer);
+            // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
             
             // using (var client = new HttpClient()) // создала экземпляра HTTP-клиента
             // {
@@ -111,5 +112,3 @@ namespace Weather_C_2
         }
     }
 }
-
-// WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
