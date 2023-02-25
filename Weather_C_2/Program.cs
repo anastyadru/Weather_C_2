@@ -25,6 +25,8 @@ namespace Weather_C_2
             }
             response.Close();
             
+            WeatherResponse response_global = JsonConvert.DeserializeObject<WeatherResponse>(answer);
+            
             // using (var client = new HttpClient()) // создала экземпляра HTTP-клиента
             // {
             // var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75");
