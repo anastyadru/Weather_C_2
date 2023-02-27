@@ -13,23 +13,21 @@ namespace Weather_C_2
         public static async Task ConnectAsync()
         {
             string url = "https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75";
-            
-            HttpWebRequest httpWebRequest = (HttpWebRequest) WebRequest.Create(url); // отправила запрос и получила ответ
-            HttpWebResponse httpWebResponse = (HttpWebResponse) httpWebRequest.GetResponse();
-            
-            
-            
-            // WebRequest request = WebRequest.Create(url);
-            // request.Method = "POST";
-            // WebResponse response = await request.GetResponseAsync();
-            string answer = string.Empty;
-            using (Stream s = response.GetResponseStream())
+
+            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url); // отправила запрос и получила ответ
+            HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
+            string response;
+            using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
             {
-                using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                {
-                    answer = await reader.ReadToEndAsync();
-                }
+                response = streamReader.ReadToEnd(); // считала текст с response
             }
+        }
+
+            // Stream dataStream = response.GetResponseStream(); // считала данные из ответа
+            // StreamReader reader = new StreamReader(dataStream);
+            // string responseFromServer = reader.ReadToEnd();
+            
             response.Close();
             
             WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(answer);
@@ -40,12 +38,7 @@ namespace Weather_C_2
             // var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75");
             // }
 
-            // Stream dataStream = response.GetResponseStream(); // считала данные из ответа
-            // StreamReader reader = new StreamReader(dataStream);
-            // string responseFromServer = reader.ReadToEnd();
-        }
-
-        static void Main(string[] args)
+            static void Main(string[] args)
         {
             Console.WriteLine("Введите название города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
             var cityNumber = int.Parse(Console.ReadLine());
@@ -116,3 +109,17 @@ namespace Weather_C_2
         }
     }
 }
+
+
+// WebRequest request = WebRequest.Create(url);
+// request.Method = "POST";
+// WebResponse response = await request.GetResponseAsync();
+// string answer = string.Empty;
+// using (Stream s = response.GetResponseStream())
+// {
+    // using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+    // {
+        // answer = await reader.ReadToEndAsync();
+    // }
+// }
+// response.Close();
