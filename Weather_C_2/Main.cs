@@ -15,15 +15,17 @@ namespace Weather_C_2
         public double TempMax { get; set; }
     }
 
-        // public Weather(double temp, int pressure, int humidity)
+        // public Weather(double temp, int pressure, int humidity, double tempMin, double tempMax)
         // {
         // Temp = temp;
         // Pressure = pressure;
         // Humidity = humidity;
+        // TempMin = tempMin;
+        // TempMax = tempMax;
         // }
         
         // protected virtual void Print()
         // {
-        // Console.WriteLine("Температура: {0}\nДавление: {1}\nВлажность: {2}%");
+        // Console.WriteLine("Температура: {0}\nДавление: {1}\nВлажность: {2}%\nТемпература Min: {3}\nТемпература Max: {4}");
         // }
 }

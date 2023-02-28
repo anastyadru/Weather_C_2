@@ -22,6 +22,8 @@ namespace Weather_C_2
             {
                 response = streamReader.ReadToEnd(); // считала текст с response
             }
+
+            WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
         }
 
             // Stream dataStream = response.GetResponseStream(); // считала данные из ответа
@@ -31,8 +33,7 @@ namespace Weather_C_2
             response.Close();
             
             WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(answer);
-            // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
-            
+
             // using (var client = new HttpClient()) // создала экземпляра HTTP-клиента
             // {
             // var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75");
