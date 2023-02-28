@@ -24,27 +24,28 @@ namespace Weather_C_2
             }
 
             WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
+
+            Console.WriteLine();
+            Console.ReadLine();
         }
 
             // Stream dataStream = response.GetResponseStream(); // считала данные из ответа
             // StreamReader reader = new StreamReader(dataStream);
             // string responseFromServer = reader.ReadToEnd();
+
             
-            response.Close();
-            
-            WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(answer);
 
             // using (var client = new HttpClient()) // создала экземпляра HTTP-клиента
             // {
             // var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75");
             // }
 
-            static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Введите название города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
             var cityNumber = int.Parse(Console.ReadLine());
-                
-            var cityName = Console.ReadLine();
+
+            string cityName;
 
             try
             {
@@ -58,6 +59,8 @@ namespace Weather_C_2
                         Console.WriteLine($"Температура: {GetWeatherAsync(Cities.Minsk).Result.Main.Temp}");
                         Console.WriteLine($"Давление: {GetWeatherAsync(Cities.Minsk).Result.Main.Pressure}");
                         Console.WriteLine($"Влажность: {GetWeatherAsync(Cities.Minsk).Result.Main.Humidity}");
+                        Console.WriteLine($"Температура Min: {GetWeatherAsync(Cities.Minsk).Result.Main.TempMin}");
+                        Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Minsk).Result.Main.TempMax}");
                         break;
                     
                     case 2: 
@@ -68,6 +71,8 @@ namespace Weather_C_2
                         Console.WriteLine($"Температура: {GetWeatherAsync(Cities.Vitebsk).Result.Main.Temp}");
                         Console.WriteLine($"Давление: {GetWeatherAsync(Cities.Vitebsk).Result.Main.Pressure}");
                         Console.WriteLine($"Влажность: {GetWeatherAsync(Cities.Vitebsk).Result.Main.Humidity}");
+                        Console.WriteLine($"Температура Min: {GetWeatherAsync(Cities.Vitebsk).Result.Main.TempMin}");
+                        Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Vitebsk).Result.Main.TempMax}");
                         break;
                     
                     case 3: 
@@ -78,6 +83,8 @@ namespace Weather_C_2
                         Console.WriteLine($"Температура: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.Temp}");
                         Console.WriteLine($"Давление: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.Pressure}");
                         Console.WriteLine($"Влажность: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.Humidity}");
+                        Console.WriteLine($"Температура Min: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.TempMin}");
+                        Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.TempMax}");
                         break;
                     
                     case 4: 
@@ -88,6 +95,8 @@ namespace Weather_C_2
                         Console.WriteLine($"Температура: {GetWeatherAsync(Cities.Brest).Result.Main.Temp}");
                         Console.WriteLine($"Давление: {GetWeatherAsync(Cities.Brest).Result.Main.Pressure}");
                         Console.WriteLine($"Влажность: {GetWeatherAsync(Cities.Brest).Result.Main.Humidity}");
+                        Console.WriteLine($"Температура Min: {GetWeatherAsync(Cities.Brest).Result.Main.TempMin}");
+                        Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Brest).Result.Main.TempMax}");
                         break;
                     
                     case 5:
@@ -98,6 +107,8 @@ namespace Weather_C_2
                         Console.WriteLine($"Температура: {GetWeatherAsync(Cities.Grodno).Result.Main.Temp}");
                         Console.WriteLine($"Давление: {GetWeatherAsync(Cities.Grodno).Result.Main.Pressure}");
                         Console.WriteLine($"Влажность: {GetWeatherAsync(Cities.Grodno).Result.Main.Humidity}");
+                        Console.WriteLine($"Температура Min: {GetWeatherAsync(Cities.Grodno).Result.Main.TempMin}");
+                        Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Grodno).Result.Main.TempMax}");
                         break;
                 }
             }
@@ -124,3 +135,5 @@ namespace Weather_C_2
     // }
 // }
 // response.Close();
+
+// WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(answer);
