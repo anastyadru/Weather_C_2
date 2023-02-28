@@ -9,10 +9,13 @@ namespace Weather_C_2
     public class Main
     {
         private double Temp { get; set; }
-        private int Pressure { get; set; }
-        private int Humidity { get; set; }
+        private double FeelsLike { get; set; }
         public double TempMin { get; set; }
         public double TempMax { get; set; }
+        private int Pressure { get; set; }
+        private int Humidity { get; set; } 
+        private int SeaLevel { get; set; }
+        private int GrandLevel { get; set; }
     }
 
         // public Weather(double temp, int pressure, int humidity, double tempMin, double tempMax)
