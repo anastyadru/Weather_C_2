@@ -10,7 +10,7 @@ namespace Weather_C_2
 {
     class Program
     {
-        public static async Task ConnectAsync()
+        public static async Task GetWeatherDataAsync(string city)
         {
             string url = "https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75";
 
@@ -42,10 +42,10 @@ namespace Weather_C_2
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите название города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
+            Console.WriteLine("Прогноз погоды на 5 дней для города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
             var cityNumber = int.Parse(Console.ReadLine());
 
-            string cityName;
+            string cityName = Console.ReadLine();
 
             try
             {
