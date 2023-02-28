@@ -33,14 +33,7 @@ namespace Weather_C_2
             // StreamReader reader = new StreamReader(dataStream);
             // string responseFromServer = reader.ReadToEnd();
 
-            
-
-            // using (var client = new HttpClient()) // создала экземпляра HTTP-клиента
-            // {
-            // var response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={cityName}&units=metric&lang=ru&appid=1a5442d5206cd9ef2bfc21e5ca523b75");
-            // }
-
-        static void Main(string[] args)
+            static void Main(string[] args)
         {
             Console.WriteLine("Прогноз погоды на 5 дней для города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
             var cityNumber = int.Parse(Console.ReadLine());
@@ -49,6 +42,12 @@ namespace Weather_C_2
 
             try
             {
+
+                using (var client = new HttpClient()) // создала экземпляра HTTP-клиента
+                {
+                    
+                }
+                
                 switch (cityNumber)
                 {
                     case 1: 
@@ -117,6 +116,7 @@ namespace Weather_C_2
                 Console.WriteLine(ex);
                 Console.Write("Город не найден или что-то пошло не так");
             }
+            
             Console.ReadKey();
         }
     }
