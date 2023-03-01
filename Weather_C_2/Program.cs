@@ -13,35 +13,22 @@ namespace Weather_C_2
     {
         public static async Task GetWeatherDataAsync(string city)
         {
-            var client = new HttpClient(); // создала экземпляра HTTP-клиента
-            
-            var api_key = "1a5442d5206cd9ef2bfc21e5ca523b75";
-
             Console.WriteLine("Прогноз погоды на 5 дней для города: ");
             var city_name = Console.ReadLine().ToLower();
-
+            var api_key = "1a5442d5206cd9ef2bfc21e5ca523b75";
+            
+            
+            var client = new HttpClient(); // создала экземпляра HTTP-клиента
+            
             var url = $"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}&units=metric&lang=ru";
 
-            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url); // отправила запрос и получила ответ
-            HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-
-            string response;
-            using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-            {
-                response = streamReader.ReadToEnd(); // считала текст с response
-            }
-
-            WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
+            
 
             Console.WriteLine();
             Console.ReadLine();
         }
 
-            // Stream dataStream = response.GetResponseStream(); // считала данные из ответа
-            // StreamReader reader = new StreamReader(dataStream);
-            // string responseFromServer = reader.ReadToEnd();
-
-            static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Прогноз погоды на 5 дней для города: \n1) Minsk \n2) Vitebsk \n3) Novopolotsk \n4) Brest \n5) Grodno");
             var cityNumber = int.Parse(Console.ReadLine());
@@ -140,3 +127,13 @@ namespace Weather_C_2
 // response.Close();
 
 // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(answer);
+
+
+// HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url); // отправила запрос и получила ответ
+// HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+// string response;
+// using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
+//
+// response = streamReader.ReadToEnd(); // считала текст с response
+// }
+// WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
