@@ -7,9 +7,9 @@ namespace Weather_C_2
     public enum Cities 
     {
         Minsk,
-        Vitebsk,
-        Novopolotsk,
-        Brest,
-        Grodno
+        London,
+        Paris,
+        NewYork,
+        Warsaw
     }
 }
