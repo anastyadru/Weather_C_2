@@ -11,7 +11,6 @@ namespace Weather_C_2
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             Console.WriteLine("Прогноз погоды на 5 дней для города: \n1 - Minsk \n2 - London \n3 - Paris \n4 - NewYork \n5 - Warsaw");
@@ -26,57 +25,52 @@ namespace Weather_C_2
                 {
                     case City.Minsk:
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&lang=ru&appid=d6bfd60ae10dc578300a860f105ed749";
-                        // GetWeatherAsync(Cities.Minsk).Wait();
-                        // Console.WriteLine("Погода в городе Минск:");
-                        // Console.WriteLine($"Температура: {GetWeatherAsync(Cities.Minsk).Result.Main.Temp}");
-                        // Console.WriteLine($"Давление: {GetWeatherAsync(Cities.Minsk).Result.Main.Pressure}");
-                        // Console.WriteLine($"Влажность: {GetWeatherAsync(Cities.Minsk).Result.Main.Humidity}");
-                        // Console.WriteLine($"Температура Min: {GetWeatherAsync(Cities.Minsk).Result.Main.TempMin}");
-                        // Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Minsk).Result.Main.TempMax}");
+                        GetWeatherAsync(City.Minsk).Wait();
+                        Console.WriteLine("Погода в городе Минск:");
+                        Console.WriteLine($"Температура: {GetWeatherAsync(City.Minsk).Result.Main.Temp}");
+                        Console.WriteLine($"Температура Min: {GetWeatherAsync(City.Minsk).Result.Main.FeelsLike}");
+                        Console.WriteLine($"Давление: {GetWeatherAsync(City.Minsk).Result.Main.Pressure}");
+                        Console.WriteLine($"Влажность: {GetWeatherAsync(City.Minsk).Result.Main.Humidity}");
                         break;
                     
                     case City.London:
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&lang=ru&appid=f1451f839fdb9f6c9c04a07f128795ec";
-                        // GetWeatherAsync(Cities.Vitebsk).Wait();
-                        // Console.WriteLine("Погода в городе Витебск:");
-                        // Console.WriteLine($"Температура: {GetWeatherAsync(Cities.Vitebsk).Result.Main.Temp}");
-                        // Console.WriteLine($"Давление: {GetWeatherAsync(Cities.Vitebsk).Result.Main.Pressure}");
-                        // Console.WriteLine($"Влажность: {GetWeatherAsync(Cities.Vitebsk).Result.Main.Humidity}");
-                        // Console.WriteLine($"Температура Min: {GetWeatherAsync(Cities.Vitebsk).Result.Main.TempMin}");
-                        // Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Vitebsk).Result.Main.TempMax}");
+                        GetWeatherAsync(City.London).Wait();
+                        Console.WriteLine("Погода в городе Лондон:");
+                        Console.WriteLine($"Температура: {GetWeatherAsync(City.London).Result.Main.Temp}");
+                        Console.WriteLine($"Температура Min: {GetWeatherAsync(City.London).Result.Main.FeelsLike}");
+                        Console.WriteLine($"Давление: {GetWeatherAsync(City.London).Result.Main.Pressure}");
+                        Console.WriteLine($"Влажность: {GetWeatherAsync(City.London).Result.Main.Humidity}");
                         break;
                     
                     case City.Paris:
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=Paris&units=metric&lang=ru&appid=8eedcba634b7c5a1f7fa0261db5cf635";
-                        // GetWeatherAsync(Cities.Novopolotsk).Wait();
-                        // Console.WriteLine("Погода в городе Новополоцк:");
-                        // Console.WriteLine($"Температура: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.Temp}");
-                        // Console.WriteLine($"Давление: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.Pressure}");
-                        // Console.WriteLine($"Влажность: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.Humidity}");
-                        // Console.WriteLine($"Температура Min: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.TempMin}");
-                        // Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.TempMax}");
+                        GetWeatherAsync(City.Paris).Wait();
+                        Console.WriteLine("Погода в городе Париж:");
+                        Console.WriteLine($"Температура: {GetWeatherAsync(City.Paris).Result.Main.Temp}");
+                        Console.WriteLine($"Температура Min: {GetWeatherAsync(City.Paris).Result.Main.FeelsLike}");
+                        Console.WriteLine($"Давление: {GetWeatherAsync(City.Paris).Result.Main.Pressure}");
+                        Console.WriteLine($"Влажность: {GetWeatherAsync(City.Paris).Result.Main.Humidity}");
                         break;
                     
                     case City.NewYork:
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=NewYork&units=metric&lang=ru&appid=55dca5e21670cdbf9b77d287b4965ab6";
-                        // GetWeatherAsync(Cities.Brest).Wait();
-                        // Console.WriteLine("Погода в городе Брест:");
-                        // Console.WriteLine($"Температура: {GetWeatherAsync(Cities.Brest).Result.Main.Temp}");
-                        // Console.WriteLine($"Давление: {GetWeatherAsync(Cities.Brest).Result.Main.Pressure}");
-                        // Console.WriteLine($"Влажность: {GetWeatherAsync(Cities.Brest).Result.Main.Humidity}");
-                        // Console.WriteLine($"Температура Min: {GetWeatherAsync(Cities.Brest).Result.Main.TempMin}");
-                        // Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Brest).Result.Main.TempMax}");
+                        GetWeatherAsync(City.NewYork).Wait();
+                        Console.WriteLine("Погода в городе Нью-Йорк:");
+                        Console.WriteLine($"Температура: {GetWeatherAsync(City.NewYork).Result.Main.Temp}");
+                        Console.WriteLine($"Температура Min: {GetWeatherAsync(City.NewYork).Result.Main.FeelsLike}");
+                        Console.WriteLine($"Давление: {GetWeatherAsync(City.NewYork).Result.Main.Pressure}");
+                        Console.WriteLine($"Влажность: {GetWeatherAsync(City.NewYork).Result.Main.Humidity}");
                         break;
                     
                     case City.Warsaw:
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=Warsaw&units=metric&lang=ru&appid=a7eaf17a7cf263d162e40c802f229cd7";
-                        // GetWeatherAsync(Cities.Grodno).Wait();
-                        // Console.WriteLine("Погода в городе Гродно:");
-                        // Console.WriteLine($"Температура: {GetWeatherAsync(Cities.Grodno).Result.Main.Temp}");
-                        // Console.WriteLine($"Давление: {GetWeatherAsync(Cities.Grodno).Result.Main.Pressure}");
-                        // Console.WriteLine($"Влажность: {GetWeatherAsync(Cities.Grodno).Result.Main.Humidity}");
-                        // Console.WriteLine($"Температура Min: {GetWeatherAsync(Cities.Grodno).Result.Main.TempMin}");
-                        // Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Grodno).Result.Main.TempMax}");
+                        GetWeatherAsync(City.Warsaw).Wait();
+                        Console.WriteLine("Погода в городе Варшава:");
+                        Console.WriteLine($"Температура: {GetWeatherAsync(City.Warsaw).Result.Main.Temp}");
+                        Console.WriteLine($"Температура Min: {GetWeatherAsync(City.Warsaw).Result.Main.FeelsLike}");
+                        Console.WriteLine($"Давление: {GetWeatherAsync(City.Warsaw).Result.Main.Pressure}");
+                        Console.WriteLine($"Влажность: {GetWeatherAsync(City.Warsaw).Result.Main.Humidity}");
                         break;
                 }
             }
