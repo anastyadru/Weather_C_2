@@ -2,9 +2,6 @@
 using System.IO;
 using System.Net;
 using System.Linq;
-using Newtonsoft.Json;
-using System.Net.Http;
-using System.Threading.Tasks;
 using System.Collections.Generic;
 
 namespace Weather_C_2
