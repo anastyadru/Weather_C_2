@@ -9,8 +9,10 @@ using System.Collections.Generic;
 
 namespace Weather_C_2
 {
-    class Program
+    
+    public class Program
     {
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Прогноз погоды на 5 дней для города: \n1 - Minsk \n2 - London \n3 - Paris \n4 - NewYork \n5 - Warsaw");
@@ -84,29 +86,3 @@ namespace Weather_C_2
         }
     }
 }
-
-
-// WebRequest request = WebRequest.Create(url);
-// request.Method = "POST";
-// WebResponse response = await request.GetResponseAsync();
-// string answer = string.Empty;
-// using (Stream s = response.GetResponseStream())
-// {
-    // using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-    // {
-        // answer = await reader.ReadToEndAsync();
-    // }
-// }
-// response.Close();
-
-// WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(answer);
-
-
-// HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url); // отправила запрос и получила ответ
-// HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-// string response;
-// using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-//
-// response = streamReader.ReadToEnd(); // считала текст с response
-// }
-// WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);

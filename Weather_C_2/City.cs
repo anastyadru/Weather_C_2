@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 
 namespace Weather_C_2
 {
+    
     public enum City 
     {
         Minsk,
