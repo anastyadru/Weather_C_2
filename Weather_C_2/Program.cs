@@ -14,18 +14,17 @@ namespace Weather_C_2
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Прогноз погоды на 5 дней для города: \n1) 1- Minsk \n2) 2- London \n3) 3- Paris \n4) 4- NewYork \n5) 5- Warsaw");
-            var cityNumber = int.Parse(Console.ReadLine());
-
-            string cityName = Console.ReadLine();
-
+            Console.WriteLine("Прогноз погоды на 5 дней для города: \n1 - Minsk \n2 - London \n3 - Paris \n4 - NewYork \n5 - Warsaw");
+            
             try
             {
+                var cityNumber = int.Parse(Console.ReadLine());
+                string cityName = Console.ReadLine();
                 
-                switch (cityNumber)
+                City selectedCity = (City)(cityNumber - 1);
+                switch (selectedCity)
                 {
-                    case 1: 
-                        cityName = "Minsk";
+                    case City.Minsk:
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&lang=ru&appid=d6bfd60ae10dc578300a860f105ed749";
                         // GetWeatherAsync(Cities.Minsk).Wait();
                         // Console.WriteLine("Погода в городе Минск:");
@@ -36,8 +35,7 @@ namespace Weather_C_2
                         // Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Minsk).Result.Main.TempMax}");
                         break;
                     
-                    case 2: 
-                        cityName = "London";
+                    case City.London:
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&lang=ru&appid=f1451f839fdb9f6c9c04a07f128795ec";
                         // GetWeatherAsync(Cities.Vitebsk).Wait();
                         // Console.WriteLine("Погода в городе Витебск:");
@@ -48,8 +46,7 @@ namespace Weather_C_2
                         // Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Vitebsk).Result.Main.TempMax}");
                         break;
                     
-                    case 3: 
-                        cityName = "Paris";
+                    case City.Paris:
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=Paris&units=metric&lang=ru&appid=8eedcba634b7c5a1f7fa0261db5cf635";
                         // GetWeatherAsync(Cities.Novopolotsk).Wait();
                         // Console.WriteLine("Погода в городе Новополоцк:");
@@ -60,8 +57,7 @@ namespace Weather_C_2
                         // Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Novopolotsk).Result.Main.TempMax}");
                         break;
                     
-                    case 4: 
-                        cityName = "NewYork";
+                    case City.NewYork:
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=NewYork&units=metric&lang=ru&appid=55dca5e21670cdbf9b77d287b4965ab6";
                         // GetWeatherAsync(Cities.Brest).Wait();
                         // Console.WriteLine("Погода в городе Брест:");
@@ -72,8 +68,7 @@ namespace Weather_C_2
                         // Console.WriteLine($"Температура Max: {GetWeatherAsync(Cities.Brest).Result.Main.TempMax}");
                         break;
                     
-                    case 5:
-                        cityName = "Warsaw";
+                    case City.Warsaw:
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=Warsaw&units=metric&lang=ru&appid=a7eaf17a7cf263d162e40c802f229cd7";
                         // GetWeatherAsync(Cities.Grodno).Wait();
                         // Console.WriteLine("Погода в городе Гродно:");
