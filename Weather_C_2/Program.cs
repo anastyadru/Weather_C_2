@@ -18,7 +18,7 @@ namespace Weather_C_2
             {
                 var cityNumber = int.Parse(Console.ReadLine());
                 string cityName = Console.ReadLine();
-                
+
                 City selectedCity = (City)(cityNumber - 1);
                 switch (selectedCity)
                 {
@@ -26,7 +26,7 @@ namespace Weather_C_2
                         string url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&lang=ru&appid=d6bfd60ae10dc578300a860f105ed749";
                         GetWeatherAsync(City.Minsk).Wait();
                         Console.WriteLine("Погода в городе Минск:");
-                        Console.WriteLine($"Температура: {GetWeatherAsync(City.Minsk).Result.Main.Temp}");
+                        Console.WriteLine($"Температура: {OpenWeatherAsync(City.Minsk).Result.Main.Temp}");
                         Console.WriteLine($"Температура Min: {GetWeatherAsync(City.Minsk).Result.Main.FeelsLike}");
                         Console.WriteLine($"Давление: {GetWeatherAsync(City.Minsk).Result.Main.Pressure}");
                         Console.WriteLine($"Влажность: {GetWeatherAsync(City.Minsk).Result.Main.Humidity}");
