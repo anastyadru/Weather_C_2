@@ -17,11 +17,24 @@ namespace Weather_C_2
         {
             var cityName = Console.ReadLine().ToLower();
             var apiKey = "your_api_key_here"; // 1a5442d5206cd9ef2bfc21e5ca523b75
+            var url =
+                $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric&lang=ru";
             
-            var client = new HttpClient(); // создала экземпляра HTTP-клиента
-            HttpResponseMessage response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric&lang=ru");
+            var client = new HttpClient(); // создала объект для отправки HTTP-запросов к серверу
+            HttpResponseMessage response = await client.GetAsync(url);
+            
+            // отправила GET-запрос на сервер по URL с помощью HttpClient и сохранила ответ response типа HttpResponseMessage
+            // для получения ответа использовала GetAsync(), вернул HttpResponseMessage с информацией
+            
             string responseBody = await response.Content.ReadAsStringAsync();
+            
+            // программа считала тело ответа сервера в виде строки из объекта HttpResponseMessage с
+            // помощью метода ReadAsStringAsync() и сохранила его в переменную responseBody типа string
+            
             OpenWeather openWeather = JsonConvert.DeserializeObject<OpenWeather>(responseBody);
+            
+            // программа преобразовала responseBody в объект OpenWeather с помощью метода JsonConvert.DeserializeObject()
+            // из библиотеки Newtonsoft.Json и сохранила его в переменную openWeather
             
             Console.WriteLine();
             Console.ReadLine();
