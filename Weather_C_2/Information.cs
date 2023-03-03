@@ -20,8 +20,8 @@ namespace Weather_C_2
             
             var client = new HttpClient(); // создала экземпляра HTTP-клиента
             HttpResponseMessage response = await client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric&lang=ru");
-
-            
+            string responseBody = await response.Content.ReadAsStringAsync();
+            OpenWeather openWeather = JsonConvert.DeserializeObject<OpenWeather>(responseBody);
             
             Console.WriteLine();
             Console.ReadLine();
