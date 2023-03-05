@@ -27,7 +27,7 @@ namespace Weather_C_2
                             "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&lang=ru&appid=d6bfd60ae10dc578300a860f105ed749";
                         GetWeatherAsync(City.Minsk).Wait();
                         Console.WriteLine("Погода в городе Минск:");
-                        Console.WriteLine($"Температура: {OpenWeatherAsync(City.Minsk).Result.Main.Temp}");
+                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}");
                         Console.WriteLine($"Температура Min: {GetWeatherAsync(City.Minsk).Result.Main.FeelsLike}");
                         Console.WriteLine($"Давление: {GetWeatherAsync(City.Minsk).Result.Main.Pressure}");
                         Console.WriteLine($"Влажность: {GetWeatherAsync(City.Minsk).Result.Main.Humidity}");

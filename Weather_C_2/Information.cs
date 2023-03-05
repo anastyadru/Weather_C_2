@@ -13,7 +13,7 @@ namespace Weather_C_2
     public class Information
     {
         
-        public async Task<OpenWeather> PrintAsync(string city)
+        public async Task<WeatherData> PrintAsync(string city)
         {
             var cityName = Console.ReadLine().ToLower();
             var apiKey = "your_api_key_here"; // 1a5442d5206cd9ef2bfc21e5ca523b75
@@ -31,7 +31,7 @@ namespace Weather_C_2
             // программа считала тело ответа сервера в виде строки из объекта HttpResponseMessage с
             // помощью метода ReadAsStringAsync() и сохранила его в переменную responseBody типа string
             
-            OpenWeather openWeather = JsonConvert.DeserializeObject<OpenWeather>(responseBody);
+            WeatherData openWeather = JsonConvert.DeserializeObject<WeatherData>(responseBody);
             
             // программа преобразовала responseBody в объект OpenWeather с помощью метода JsonConvert.DeserializeObject()
             // из библиотеки Newtonsoft.Json и сохранила его в переменную openWeather
