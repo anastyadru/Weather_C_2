@@ -31,7 +31,7 @@ namespace Weather_C_2
             // программа считала тело ответа сервера в виде строки из объекта HttpResponseMessage с
             // помощью метода ReadAsStringAsync() и сохранила его в переменную responseBody типа string
             
-            WeatherData openWeather = JsonConvert.DeserializeObject<WeatherData>(responseBody);
+            WeatherData weatherData = JsonConvert.DeserializeObject<WeatherData>(responseBody);
             
             // программа преобразовала responseBody в объект OpenWeather с помощью метода JsonConvert.DeserializeObject()
             // из библиотеки Newtonsoft.Json и сохранила его в переменную openWeather

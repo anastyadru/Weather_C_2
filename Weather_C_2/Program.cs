@@ -3,6 +3,8 @@ using System.IO;
 using System.Net;
 using System.Linq;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Weather_C_2
 {
@@ -25,56 +27,56 @@ namespace Weather_C_2
                     case City.Minsk:
                         string url =
                             "https://api.openweathermap.org/data/2.5/weather?q=Minsk&units=metric&lang=ru&appid=d6bfd60ae10dc578300a860f105ed749";
-                        GetWeatherAsync(City.Minsk).Wait();
+                        WeatherData.Main.(City.Minsk).Wait();
                         Console.WriteLine("Погода в городе Минск:");
-                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}");
-                        Console.WriteLine($"Температура Min: {WeatherData.Main.FeelsLike}");
-                        Console.WriteLine($"Давление: {WeatherData.Main.Pressure}");
-                        Console.WriteLine($"Влажность: {WeatherData.Main.Humidity}");
+                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}°C");
+                        Console.WriteLine($"Температура как ощущается: {WeatherData.Main.FeelsLike}°C");
+                        Console.WriteLine($"Давление: {WeatherData.Main.Pressure}Pa");
+                        Console.WriteLine($"Влажность: {WeatherData.Main.Humidity}%");
                         break;
 
                     case City.London:
                         string url =
                             "https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&lang=ru&appid=f1451f839fdb9f6c9c04a07f128795ec";
-                        GetWeatherAsync(City.London).Wait();
+                        WeatherData.Main.(City.London).Wait();
                         Console.WriteLine("Погода в городе Лондон:");
-                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}");
-                        Console.WriteLine($"Температура Min: {WeatherData.Main.FeelsLike}");
-                        Console.WriteLine($"Давление: {WeatherData.Main.Pressure}");
-                        Console.WriteLine($"Влажность: {WeatherData.Main.Humidity}");
+                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}°C");
+                        Console.WriteLine($"Температура как ощущается: {WeatherData.Main.FeelsLike}°C");
+                        Console.WriteLine($"Давление: {WeatherData.Main.Pressure}Pa");
+                        Console.WriteLine($"Влажность: {WeatherData.Main.Humidity}%");
                         break;
 
                     case City.Paris:
                         string url =
                             "https://api.openweathermap.org/data/2.5/weather?q=Paris&units=metric&lang=ru&appid=8eedcba634b7c5a1f7fa0261db5cf635";
-                        GetWeatherAsync(City.Paris).Wait();
+                        WeatherData.Main.(City.Paris).Wait();
                         Console.WriteLine("Погода в городе Париж:");
-                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}");
-                        Console.WriteLine($"Температура Min: {WeatherData.Main.FeelsLike}");
-                        Console.WriteLine($"Давление: {WeatherData.Main.Pressure}");
-                        Console.WriteLine($"Влажность: {WeatherData.Main.Humidity}");
+                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}°C");
+                        Console.WriteLine($"Температура как ощущается: {WeatherData.Main.FeelsLike}°C");
+                        Console.WriteLine($"Давление: {WeatherData.Main.Pressure}Pa");
+                        Console.WriteLine($"Влажность: {WeatherData.Main.Humidity}%");
                         break;
 
                     case City.NewYork:
                         string url =
                             "https://api.openweathermap.org/data/2.5/weather?q=NewYork&units=metric&lang=ru&appid=55dca5e21670cdbf9b77d287b4965ab6";
-                        GetWeatherAsync(City.NewYork).Wait();
+                        WeatherData.Main.(City.NewYork).Wait();
                         Console.WriteLine("Погода в городе Нью-Йорк:");
-                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}");
-                        Console.WriteLine($"Температура Min: {WeatherData.Main.FeelsLike}");
-                        Console.WriteLine($"Давление: {WeatherData.Main.Pressure}");
-                        Console.WriteLine($"Влажность: {WeatherData.Main.Humidity}");
+                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}°C");
+                        Console.WriteLine($"Температура как ощущается: {WeatherData.Main.FeelsLike}°C");
+                        Console.WriteLine($"Давление: {WeatherData.Main.Pressure}Pa");
+                        Console.WriteLine($"Влажность: {WeatherData.Main.Humidity}%");
                         break;
 
                     case City.Warsaw:
                         string url =
                             "https://api.openweathermap.org/data/2.5/weather?q=Warsaw&units=metric&lang=ru&appid=a7eaf17a7cf263d162e40c802f229cd7";
-                        GetWeatherAsync(City.Warsaw).Wait();
+                        WeatherData.Main.(City.Warsaw).Wait();
                         Console.WriteLine("Погода в городе Варшава:");
-                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}");
-                        Console.WriteLine($"Температура Min: {WeatherData.Main.FeelsLike}");
-                        Console.WriteLine($"Давление: {WeatherData.Main.Pressure}");
-                        Console.WriteLine($"Влажность: {WeatherData.Main.Humidity}");
+                        Console.WriteLine($"Температура: {WeatherData.Main.Temp}°C");
+                        Console.WriteLine($"Температура как ощущается: {WeatherData.Main.FeelsLike}°C");
+                        Console.WriteLine($"Давление: {WeatherData.Main.Pressure}Pa");
+                        Console.WriteLine($"Влажность: {WeatherData.Main.Humidity}%");
                         break;
                 }
             }
