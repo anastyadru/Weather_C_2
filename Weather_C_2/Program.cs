@@ -83,7 +83,7 @@ namespace Weather_C_2
 
             catch ( ex)
             {
-           
+                Console.WriteLine ("Такого города не существует в заготовленном списке. Введите город вручную: ");
             }
             
             catch (Exception ex)
