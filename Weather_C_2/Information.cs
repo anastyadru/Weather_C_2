@@ -53,9 +53,7 @@ namespace Weather_C_2
 // }
 // }
 // response.Close();
-
 // WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(answer);
-
 
 // HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url); // отправила запрос и получила ответ
 // HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
