@@ -15,7 +15,7 @@ namespace Weather_C_2
         
         public async Task<WeatherData> PrintAsync(string city)
         {
-            var cityName = Console.ReadLine().ToLower();
+            var cityName = Console.ReadLine();
             var apiKey = "your_api_key_here"; // 1a5442d5206cd9ef2bfc21e5ca523b75
             var url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric&lang=ru";
             
