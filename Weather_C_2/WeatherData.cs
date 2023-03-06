@@ -15,7 +15,7 @@ namespace Weather_C_2
         public List<Weather> Weather { get; set; }
         [JsonProperty("base")]
         public string Base { get; set; }
-        public Data Data { get; set; }
+        public static Data Data { get; set; }
         public int Visibility { get; set; }
         public Wind Wind { get; set; }
         public Clouds Clouds { get; set; }
