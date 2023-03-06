@@ -17,8 +17,7 @@ namespace Weather_C_2
         {
             var cityName = Console.ReadLine().ToLower();
             var apiKey = "your_api_key_here"; // 1a5442d5206cd9ef2bfc21e5ca523b75
-            var url = 
-                $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric&lang=ru";
+            var url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric&lang=ru";
             
             var client = new HttpClient(); // создала объект для отправки HTTP-запросов к серверу
             HttpResponseMessage response = await client.GetAsync(url);
