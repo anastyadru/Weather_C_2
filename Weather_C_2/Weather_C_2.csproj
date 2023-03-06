@@ -48,7 +48,7 @@
         <Compile Include="City.cs" />
         <Compile Include="Clouds.cs" />
         <Compile Include="Coordinates.cs" />
-        <Compile Include="Main.cs" />
+        <Compile Include="Data.cs" />
         <Compile Include="WeatherData.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
