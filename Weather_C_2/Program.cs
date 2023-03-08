@@ -1,10 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Net;
-using System.Linq;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 
 namespace Weather_C_2
 {
