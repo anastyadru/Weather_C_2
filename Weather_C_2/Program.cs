@@ -22,7 +22,6 @@ namespace Weather_C_2
                 {
                     case City.Minsk:
                         var newUrl = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&appid=d6bfd60ae10dc578300a860f105ed749&units=metric&lang=ru";
-                        // WeatherData.Data.(City.Minsk).Wait(); // cтрока ожидала завершения асинхронной операции получения данных о погоде
                         Console.WriteLine("Погода в городе Минск: ");
                         Console.WriteLine($"Температура: {WeatherData.Data.Temp}°C");
                         Console.WriteLine($"Температура ощущается на: {WeatherData.Data.FeelsLike}°C");
@@ -32,7 +31,6 @@ namespace Weather_C_2
 
                     case City.London:
                         var newUrl = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=f1451f839fdb9f6c9c04a07f128795ec&units=metric&lang=ru";
-                        // WeatherData.Data.(City.London).Wait();
                         Console.WriteLine("Погода в городе Лондон: ");
                         Console.WriteLine($"Температура: {WeatherData.Data.Temp}°C");
                         Console.WriteLine($"Температура ощущается на: {WeatherData.Data.FeelsLike}°C");
@@ -42,7 +40,6 @@ namespace Weather_C_2
 
                     case City.Paris:
                         var newUrl = "https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=8eedcba634b7c5a1f7fa0261db5cf635&units=metric&lang=ru";
-                        // WeatherData.Data.(City.Paris).Wait();
                         Console.WriteLine("Погода в городе Париж: ");
                         Console.WriteLine($"Температура: {WeatherData.Data.Temp}°C");
                         Console.WriteLine($"Температура ощущается на: {WeatherData.Data.FeelsLike}°C");
@@ -52,7 +49,6 @@ namespace Weather_C_2
 
                     case City.NewYork:
                         var newUrl = "https://api.openweathermap.org/data/2.5/weather?q=NewYork&appid=55dca5e21670cdbf9b77d287b4965ab6&units=metric&lang=ru";
-                        // WeatherData.Data.(City.NewYork).Wait();
                         Console.WriteLine("Погода в городе Нью-Йорк: ");
                         Console.WriteLine($"Температура: {WeatherData.Data.Temp}°C");
                         Console.WriteLine($"Температура ощущается на: {WeatherData.Data.FeelsLike}°C");
@@ -62,7 +58,6 @@ namespace Weather_C_2
 
                     case City.Warsaw:
                         var newUrl = "https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=a7eaf17a7cf263d162e40c802f229cd7&units=metric&lang=ru";
-                        // WeatherData.Data.(City.Warsaw).Wait();
                         Console.WriteLine("Погода в городе Варшава: ");
                         Console.WriteLine($"Температура: {WeatherData.Data.Temp}°C");
                         Console.WriteLine($"Температура ощущается на: {WeatherData.Data.FeelsLike}°C");

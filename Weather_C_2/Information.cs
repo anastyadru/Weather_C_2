@@ -28,21 +28,11 @@ namespace Weather_C_2
             
             WeatherData weatherData = JsonConvert.DeserializeObject<WeatherData>(responseBody);
             
-            // программа преобразовала responseBody в объект OpenWeather с помощью метода JsonConvert.DeserializeObject()
-            // из библиотеки Newtonsoft.Json и сохранила его в переменную openWeather
+            // программа преобразовала responseBody в объект WeatherData с помощью метода JsonConvert.DeserializeObject()
+            // из библиотеки Newtonsoft.Json и сохранила его в переменную WeatherData
             
             Console.WriteLine();
             Console.ReadLine();
         }
     }
 }
-
-
-// HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url); // отправила запрос и получила ответ
-// HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-// string response;
-// using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-//
-// response = streamReader.ReadToEnd(); // считала текст с response
-// }
-// WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(response);
