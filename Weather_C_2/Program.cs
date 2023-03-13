@@ -11,12 +11,13 @@ namespace Weather_C_2
         static void Main(string[] args)
         {
             
+            var url = "";
+            var cityName = Console.ReadLine();
+            
             try
             {
                 Console.WriteLine("Прогноз погоды на 5 дней для города: \n1 - Minsk \n2 - London \n3 - Paris \n4 - NewYork \n5 - Warsaw");
-                var cityName = Console.ReadLine();
-
-                var url = "";
+                
                 switch (cityName)
                 {
                     case "Minsk":
@@ -46,12 +47,10 @@ namespace Weather_C_2
                 Console.WriteLine(ex);
                 Console.WriteLine ("Такого города не существует в заготовленном списке. Введите город вручную: ");
                 
-                var cityName = Console.ReadLine();
                 var url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=1a5442d5206cd9ef2bfc21e5ca523b75&units=metric&lang=ru";
             }
 
             var result = "";
-            var url = "";
             using (var client = new HttpClient())
             {
                 var response = client.GetAsync(url).Result;
@@ -71,7 +70,8 @@ namespace Weather_C_2
                     result += $"Ошибка получения данных о погоде в городе {cityName}\n";
                 }
             }
-
+            
+            Console.ReadLine();
             return result;
         }
     }
