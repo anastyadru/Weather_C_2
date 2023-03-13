@@ -10,33 +10,32 @@ namespace Weather_C_2
         
         static void Main(string[] args)
         {
-            Console.WriteLine("Прогноз погоды на 5 дней для города: \n1 - Minsk \n2 - London \n3 - Paris \n4 - NewYork \n5 - Warsaw");
             
             try
             {
-                var cityNumber = int.Parse(Console.ReadLine());
-                City selectedCity = (City)(cityNumber - 1);
-                
+                Console.WriteLine("Прогноз погоды на 5 дней для города: \n1 - Minsk \n2 - London \n3 - Paris \n4 - NewYork \n5 - Warsaw");
+                var cityName = Console.ReadLine();
+
                 var url = "";
-                switch (selectedCity)
+                switch (cityName)
                 {
-                    case City.Minsk:
+                    case "Minsk":
                         var url = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&appid=d6bfd60ae10dc578300a860f105ed749&units=metric&lang=ru";
                         break;
 
-                    case City.London:
+                    case "London":
                         var url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=f1451f839fdb9f6c9c04a07f128795ec&units=metric&lang=ru";
                         break;
 
-                    case City.Paris:
+                    case "Paris":
                         var url = "https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=8eedcba634b7c5a1f7fa0261db5cf635&units=metric&lang=ru";
                         break;
 
-                    case City.NewYork:
+                    case "NewYork":
                         var url = "https://api.openweathermap.org/data/2.5/weather?q=NewYork&appid=55dca5e21670cdbf9b77d287b4965ab6&units=metric&lang=ru";
                         break;
 
-                    case City.Warsaw:
+                    case "Warsaw":
                         var url = "https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=a7eaf17a7cf263d162e40c802f229cd7&units=metric&lang=ru";
                         break;
                 }
