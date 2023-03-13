@@ -1,4 +1,6 @@
 ﻿using System;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace Weather_C_2
 {
@@ -48,10 +50,10 @@ namespace Weather_C_2
                         var content = response.Content.ReadAsStringAsync().Result;
                         var weatherData = JsonConvert.DeserializeObject<WeatherData>(content);
                         result += $"Погода в городе {cityName}: \n";
-                        result += $"Температура: {weatherData.Data.Temp}°C\n";
-                        result += $"Температура ощущается на: {weatherData.Data.FeelsLike}°C\n";
-                        result += $"Давление: {weatherData.Data.Pressure}Pa\n";
-                        result += $"Влажность: {weatherData.Data.Humidity}%\n";
+                        result += $"Температура: {WeatherData.Data.Temp}°C\n";
+                        result += $"Температура ощущается на: {WeatherData.Data.FeelsLike}°C\n";
+                        result += $"Давление: {WeatherData.Data.Pressure}Pa\n";
+                        result += $"Влажность: {WeatherData.Data.Humidity}%\n";
                     }
                     else
                     {
@@ -81,34 +83,4 @@ namespace Weather_C_2
         }
     }
 }
-
-// Console.WriteLine("Погода в городе Минск: ");
-// Console.WriteLine($"Температура: {WeatherData.Data.Temp}°C");
-// Console.WriteLine($"Температура ощущается на: {WeatherData.Data.FeelsLike}°C");
-// Console.WriteLine($"Давление: {WeatherData.Data.Pressure}Pa");
-// Console.WriteLine($"Влажность: {WeatherData.Data.Humidity}%");
-
-// Console.WriteLine("Погода в городе Лондон: ");
-// Console.WriteLine($"Температура: {WeatherData.Data.Temp}°C");
-// Console.WriteLine($"Температура ощущается на: {WeatherData.Data.FeelsLike}°C");
-// Console.WriteLine($"Давление: {WeatherData.Data.Pressure}Pa");
-// Console.WriteLine($"Влажность: {WeatherData.Data.Humidity}%");
-
-// Console.WriteLine("Погода в городе Париж: ");
-// Console.WriteLine($"Температура: {WeatherData.Data.Temp}°C");
-// Console.WriteLine($"Температура ощущается на: {WeatherData.Data.FeelsLike}°C");
-// Console.WriteLine($"Давление: {WeatherData.Data.Pressure}Pa");
-// Console.WriteLine($"Влажность: {WeatherData.Data.Humidity}%");
-
-// Console.WriteLine("Погода в городе Нью-Йорк: ");
-// Console.WriteLine($"Температура: {WeatherData.Data.Temp}°C");
-// Console.WriteLine($"Температура ощущается на: {WeatherData.Data.FeelsLike}°C");
-// Console.WriteLine($"Давление: {WeatherData.Data.Pressure}Pa");
-// Console.WriteLine($"Влажность: {WeatherData.Data.Humidity}%");
-
-// Console.WriteLine("Погода в городе Варшава: ");
-// Console.WriteLine($"Температура: {WeatherData.Data.Temp}°C");
-// Console.WriteLine($"Температура ощущается на: {WeatherData.Data.FeelsLike}°C");
-// Console.WriteLine($"Давление: {WeatherData.Data.Pressure}Pa");
-// Console.WriteLine($"Влажность: {WeatherData.Data.Humidity}%");
 
