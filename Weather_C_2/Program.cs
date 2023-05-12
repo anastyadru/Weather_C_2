@@ -8,7 +8,7 @@ namespace Weather_C_2
     public class Program
     {
         
-        public static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             string url;
             string cityName;
@@ -36,7 +36,7 @@ namespace Weather_C_2
                 {
                     var responseBody = response.Content.ReadAsStringAsync().Result;
                     WeatherData weatherData = JsonConvert.DeserializeObject<WeatherData>(responseBody);
-                    result += $"Погода в городе {cityName}: \n";
+                    result += $"Погода в городе {WeatherData.City}: \n";
                     result += $"Температура: {WeatherData.Data.Temp}°C\n";
                     result += $"Температура ощущается на: {WeatherData.Data.FeelsLike}°C\n";
                     result += $"Давление: {WeatherData.Data.Pressure}Pa\n";
@@ -49,8 +49,8 @@ namespace Weather_C_2
                 }
             }
             
+            Console.WriteLine(result);
             Console.ReadLine();
-            return result;
         }
         
     }
