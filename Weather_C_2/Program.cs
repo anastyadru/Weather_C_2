@@ -1,31 +1,29 @@
 ﻿using System;
 using Newtonsoft.Json;
 using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace Weather_C_2
 {
     public class Program
     {
         
-        public static string Main(string[] args)
+        public static void Main(string[] args)
         {
             string url;
-            var cityName = Console.ReadLine();
-            
+            string cityName;
+
             try
             {
                 Console.WriteLine("Введите, для какого города прогноз погоды на 5 дней: Minsk, London, Paris, NewYork, Warsaw");
-
+                cityName = Console.ReadLine();
                 url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=d6bfd60ae10dc578300a860f105ed749&units=metric&lang=ru";
-                       
             }
 
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 Console.WriteLine ("Такого города не существует в заготовленном списке. Введите город вручную: ");
-                
+                cityName = Console.ReadLine();
                 url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=1a5442d5206cd9ef2bfc21e5ca523b75&units=metric&lang=ru";
             }
             
