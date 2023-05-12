@@ -1,6 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Weather_C_2
 {
@@ -30,7 +31,7 @@ namespace Weather_C_2
             var result = "";
             using (var client = new HttpClient())
             {
-                var response = client.GetAsync(url).Result; // выполнен асинхронный HTTP-запрос к URL-адресу, ожидаю ответа от сервера
+                var response = client.GetAsync(url).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     var responseBody = response.Content.ReadAsStringAsync().Result;
