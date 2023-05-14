@@ -28,6 +28,8 @@ namespace Weather_C_2
                 url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=1a5442d5206cd9ef2bfc21e5ca523b75&units=metric&lang=ru";
             }
             
+            var information = new Information();
+            
             var result = "";
             using (var client = new HttpClient())
             {

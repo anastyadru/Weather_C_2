@@ -16,8 +16,7 @@ namespace Weather_C_2
                 var apiKey = "your_api_key_here";
                 var url =
                     $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric&lang=ru";
-
-                var client = new HttpClient();
+                
                 HttpResponseMessage response = await client.GetAsync(url);
 
                 string responseBody = await response.Content.ReadAsStringAsync();
