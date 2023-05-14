@@ -25,6 +25,8 @@ namespace Weather_C_2
 
                 Console.WriteLine();
                 Console.ReadLine();
+                
+                return weatherData;
             }
         }
         
