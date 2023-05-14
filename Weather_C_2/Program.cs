@@ -29,15 +29,17 @@ namespace Weather_C_2
             }
             
             var information = new Information();
+            var weatherData = await information.PrintAsync(url);
             
             var result = "";
+
             using (var client = new HttpClient())
             {
                 var response = client.GetAsync(url).Result;
-                if (response.IsSuccessStatusCode)
+                if (weatherData != null)
                 {
                     var responseBody = response.Content.ReadAsStringAsync().Result;
-                    WeatherData weatherData = JsonConvert.DeserializeObject<WeatherData>(responseBody);
+                    // WeatherData weatherData = JsonConvert.DeserializeObject<WeatherData>(responseBody);
                     result += $"Погода в городе {WeatherData.City}: \n";
                     result += $"Температура: {WeatherData.Data.Temp}°C\n";
                     result += $"Температура ощущается на: {WeatherData.Data.FeelsLike}°C\n";
