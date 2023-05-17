@@ -31,7 +31,7 @@ namespace Weather_C_2
             }
 
             var information = new Information();
-            var weatherData = await information.PrintAsync(cityName);
+            WeatherData weatherData = await information.GetWeatherAsync(cityName);
 
             var result = "";
 
