@@ -1,0 +1,6 @@
+C:\Users\user\RiderProjects\Weather_C_2\Weather_C_2\obj\Debug\Weather_C_2.csproj.AssemblyReference.cache
+C:\Users\user\RiderProjects\Weather_C_2\Weather_C_2\obj\Debug\Weather_C_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\RiderProjects\Weather_C_2\Weather_C_2\obj\Debug\Weather_C_2.csproj.CoreCompileInputs.cache
+C:\Program Files\Fork\Weather_C_2\Weather_C_2\obj\Debug\Weather_C_2.csproj.AssemblyReference.cache
+C:\Program Files\Fork\Weather_C_2\Weather_C_2\obj\Debug\Weather_C_2.csproj.SuggestedBindingRedirects.cache
+C:\Program Files\Fork\Weather_C_2\Weather_C_2\obj\Debug\Weather_C_2.csproj.CoreCompileInputs.cache
