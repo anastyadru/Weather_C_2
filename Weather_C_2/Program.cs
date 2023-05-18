@@ -27,21 +27,21 @@ namespace Weather_C_2
                 Console.WriteLine("Такого города не существует в заготовленном списке. Введите город вручную: ");
                 
                 cityName = Console.ReadLine();
-                url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=1a5442d5206cd9ef2bfc21e5ca523b75&units=metric&lang=ru";
+                url = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=d6bfd60ae10dc578300a860f105ed749&units=metric&lang=ru";
             }
 
             var information = new Information();
-            WeatherData weatherData = await information.GetWeatherAsync(cityName);
+            WeatherData weatherData = await information.PrintAsync(cityName);
 
             var result = "";
 
             if (weatherData != null)
             {
-                result += $"Погода в городе {WeatherData.City}: \n";
-                result += $"Температура: {WeatherData.Data.Temp}°C\n";
-                result += $"Температура ощущается на: {WeatherData.Data.FeelsLike}°C\n";
-                result += $"Давление: {WeatherData.Data.Pressure}Pa\n";
-                result += $"Влажность: {WeatherData.Data.Humidity}%\n";
+                result += $"Погода в городе {cityName}: \n";
+                result += $"Температура: {weatherData.Data.Temp}°C\n";
+                result += $"Температура ощущается на: {weatherData.Data.FeelsLike}°C\n";
+                result += $"Давление: {weatherData.Data.Pressure}Pa\n";
+                result += $"Влажность: {weatherData.Data.Humidity}%\n";
             }
 
             else

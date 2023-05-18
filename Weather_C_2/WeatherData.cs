@@ -14,7 +14,7 @@ namespace Weather_C_2
         
         public string Base { get; set; }
         
-        public static Data Data { get; set; }
+        public Data Data { get; set; }
         
         public int Visibility { get; set; }
         
@@ -32,6 +32,6 @@ namespace Weather_C_2
         
         public int Cod { get; set; }
         
-        public static City City { get; set; }
+        public string City { get; set; }
     }
 }
